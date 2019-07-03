@@ -1,11 +1,27 @@
-import React from 'react';
-import './App.css';
+import React, {Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+class Counter extends Component {
+  constructor () {
+    super();
+    this.state = {
+      counter: 0,
+    }
+  }
+
+
+  render() {
+    console.log("This is line 13 representating state", this.state.counter);
+    return(
+      <div className="container">
+        <div className="navbar">Counter.js</div>
+        <div className="counter">
+          <h1>What do we put here??? :)</h1>
+          <button type="button">Increment</button>
+          <button type="button">Decrement</button>
+        </div>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default Counter;
